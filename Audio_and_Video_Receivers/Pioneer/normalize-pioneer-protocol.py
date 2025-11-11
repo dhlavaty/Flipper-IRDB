@@ -31,8 +31,8 @@ def process_file(input_file):
                         # replacement: 8300–8700 -> 8500
                         elif 8300 <= num <= 8700:
                             new_parts.append("8500")
-                        # replacement: 25800–26200 -> 26000
-                        elif 24700 <= num <= 27300:
+                        # replacement: 24700–27600 -> 26000
+                        elif 24700 <= num <= 27600:
                             new_parts.append("26000")
                         else:
                             # Keep original formatting (int vs float)
