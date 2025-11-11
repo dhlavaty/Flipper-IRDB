@@ -22,8 +22,8 @@ def process_file(input_file):
                         # replacement: 380–650 -> 500
                         if 380 <= num <= 650:
                             new_parts.append("500")
-                        # replacement: 1380-1620 -> 1500
-                        elif 1380 <= num <= 1620:
+                        # replacement: 1380-1640 -> 1500
+                        elif 1380 <= num <= 1640:
                             new_parts.append("1500")
                         # replacement: 4025-4425 -> 4225
                         elif 4025 <= num <= 4425:
@@ -35,6 +35,8 @@ def process_file(input_file):
                         elif 24700 <= num <= 27600:
                             new_parts.append("26000")
                         else:
+                            print(f"Untouched number {num}")
+
                             # Keep original formatting (int vs float)
                             new_parts.append(str(int(num)) if num.is_integer() else str(num))
                     except ValueError:
